@@ -27,12 +27,52 @@ public class Main {
 				input.nextLine();
 				i--;
 			}
+			if (i > 3) {
+				if (checkWin())
+					break;
+			}
 		}
-		clear();
-		printBoard();
 		input.nextLine();
 		input.nextLine();
 
+	}
+
+	private static boolean checkWin() {
+		clear();
+		printBoard();
+		if (places[0] != null && places[0] == places[1] && places[0] == places[2]) {
+			TextDecoration.printlnColored(places[2] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		if (places[3] != null && places[3] == places[4] && places[3] == places[5]) {
+			TextDecoration.printlnColored(places[5] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		if (places[6] != null && places[6] == places[7] && places[6] == places[8]) {
+			TextDecoration.printlnColored(places[8] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		if (places[0] != null && places[0] == places[3] && places[0] == places[6]) {
+			TextDecoration.printlnColored(places[6] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		if (places[1] != null && places[1] == places[4] && places[1] == places[7]) {
+			TextDecoration.printlnColored(places[7] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		if (places[2] != null && places[2] == places[5] && places[2] == places[8]) {
+			TextDecoration.printlnColored(places[8] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		if (places[0] != null && places[0] == places[4] && places[0] == places[8]) {
+			TextDecoration.printlnColored(places[8] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		if (places[2] != null && places[2] == places[4] && places[2] == places[6]) {
+			TextDecoration.printlnColored(places[6] + " WINS", TextDecoration.BOLD_GREEN);
+			return true;
+		}
+		return false;
 	}
 
 	private static void printBoard() {
@@ -47,9 +87,9 @@ public class Main {
 					TextDecoration.printColored(" O ", TextDecoration.BOLD_BLUE);
 				}
 
-				TextDecoration.printColored(j != 2 ? " " : "", TextDecoration.HIGHLIGHT_WHITE);
+				TextDecoration.printColored(j != 2 ? "  " : "", TextDecoration.HIGHLIGHT_WHITE);
 			}
-			TextDecoration.printlnColored(i != 2 ? "\n           " : "", TextDecoration.HIGHLIGHT_WHITE);
+			TextDecoration.printlnColored(i != 2 ? "\n             " : "", TextDecoration.HIGHLIGHT_WHITE);
 		}
 	}
 
