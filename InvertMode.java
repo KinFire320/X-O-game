@@ -1,72 +1,79 @@
 public class InvertMode extends ClassicMode {
 
 	@Override
-	public State checkWin() {
+	public Player checkWin() {
 
-		State winner = null;
-		if (places[0] != null && places[0] == places[1] && places[0] == places[2]) {
-			winner = (places[0] == State.X ? State.O : State.X);
+		Player winner = null;
+		if (board.getOrDefault(0, null) != null && board.get(0) == board.get(1) && board.get(0) == board.get(2)) {
+			winner = (board.get(0) == Player.X ? Player.O : Player.X);
 
-			if (places[0] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(0) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
-		} else if (places[3] != null && places[3] == places[4] && places[3] == places[5]) {
-			winner = places[3] == State.X ? State.O : State.X;
+		} else if (board.getOrDefault(3, null) != null && board.get(3) == board.get(4)
+				&& board.get(3) == board.get(5)) {
+			winner = board.get(3) == Player.X ? Player.O : Player.X;
 
-			if (places[3] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(3) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
-		} else if (places[6] != null && places[6] == places[7] && places[6] == places[8]) {
-			winner = places[6] == State.X ? State.O : State.X;
+		} else if (board.getOrDefault(6, null) != null && board.get(6) == board.get(7)
+				&& board.get(6) == board.get(8)) {
+			winner = board.get(6) == Player.X ? Player.O : Player.X;
 
-			if (places[6] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(6) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
-		} else if (places[0] != null && places[0] == places[3] && places[0] == places[6]) {
-			winner = places[0] == State.X ? State.O : State.X;
+		} else if (board.getOrDefault(0, null) != null && board.get(0) == board.get(3)
+				&& board.get(0) == board.get(6)) {
+			winner = board.get(0) == Player.X ? Player.O : Player.X;
 
-			if (places[0] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(0) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
-		} else if (places[1] != null && places[1] == places[4] && places[1] == places[7]) {
-			winner = places[1] == State.X ? State.O : State.X;
+		} else if (board.getOrDefault(1, null) != null && board.get(1) == board.get(4)
+				&& board.get(1) == board.get(7)) {
+			winner = board.get(1) == Player.X ? Player.O : Player.X;
 
-			if (places[1] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(1) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
-		} else if (places[2] != null && places[2] == places[5] && places[2] == places[8]) {
-			winner = places[2] == State.X ? State.O : State.X;
+		} else if (board.getOrDefault(2, null) != null && board.get(2) == board.get(5)
+				&& board.get(2) == board.get(8)) {
+			winner = board.get(2) == Player.X ? Player.O : Player.X;
 
-			if (places[2] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(2) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
-		} else if (places[0] != null && places[0] == places[4] && places[0] == places[8]) {
-			winner = places[0] == State.X ? State.O : State.X;
+		} else if (board.getOrDefault(0, null) != null && board.get(0) == board.get(4)
+				&& board.get(0) == board.get(8)) {
+			winner = board.get(0) == Player.X ? Player.O : Player.X;
 
-			if (places[0] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(0) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
-		} else if (places[2] != null && places[2] == places[4] && places[2] == places[6]) {
-			winner = places[2] == State.X ? State.O : State.X;
+		} else if (board.getOrDefault(2, null) != null && board.get(2) == board.get(4)
+				&& board.get(2) == board.get(6)) {
+			winner = board.get(2) == Player.X ? Player.O : Player.X;
 
-			if (places[2] == State.X) {
-				Main.increasePlayerOScore();
+			if (board.get(2) == Player.X) {
+				Main.increaseplayer2Score();
 			} else {
-				Main.increasePlayerXScore();
+				Main.increasePlayer1Score();
 			}
 		}
 		return winner;

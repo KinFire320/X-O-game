@@ -1,4 +1,4 @@
-enum State {
+enum Player {
 	X,
 	O
 }
@@ -6,7 +6,5 @@ enum State {
 enum GameMode {
 	CLASSIC,
 	INFINET,
-	SUPER,
-	INVERT,
 	INFINET_INVERT
 }

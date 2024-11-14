@@ -3,5 +3,5 @@ public interface Mode {
 
 	void printBoard();
 
-	State checkWin();
+	Player checkWin();
 }
