@@ -33,7 +33,8 @@ public class ClassicMode implements Mode {
 					Main.ShowScores();
 					printBoard();
 					TextDecoration.printColored(
-							winner == Player.X ? Main.getPlayer1Name() : Main.getPlayer2Name() + " WON!",
+							(winner == Player.X ? Main.getPlayer1Name() : Main.getPlayer2Name()).concat(
+									" WON!"),
 							winner == Player.X ? TextDecoration.RED : TextDecoration.BLUE);
 					input.nextLine();
 					input.nextLine();
@@ -58,7 +59,8 @@ public class ClassicMode implements Mode {
 				Main.ShowScores();
 				printBoard();
 				TextDecoration.printColored(
-						winner == Player.X ? Main.getPlayer1Name() : Main.getPlayer2Name() + " WON!",
+						(winner == Player.X ? Main.getPlayer1Name() : Main.getPlayer2Name()).concat(
+								" WON!"),
 						winner == Player.X ? TextDecoration.RED : TextDecoration.BLUE);
 				input.nextLine();
 				input.nextLine();
