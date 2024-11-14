@@ -27,6 +27,11 @@ public class InfinetMode extends ClassicMode {
 			}
 
 			Player winner = checkWin();
+			// if one enterd -1 the other will win
+			if (choice == -2) {
+				winner = i % 2 != 0 ? Player.X : Player.O;
+			}
+
 			if (winner != null) {
 				Main.clear();
 				Main.ShowScores();

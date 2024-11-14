@@ -8,7 +8,6 @@ public class Main {
 	private static String player2Name;
 	private static Boolean stop = false;
 
-	/** */
 	public static void increasePlayer1Score() {
 		player1Score++;
 	}
@@ -25,6 +24,9 @@ public class Main {
 		return player2Name;
 	}
 
+	/*
+	 * this called to stop the game imedeitly
+	 */
 	public static void fourceStop() {
 		stop = true;
 	}
@@ -63,7 +65,7 @@ public class Main {
 			TextDecoration.printColored("5 : super\t\t", TextDecoration.BOLD_ORANGE);
 			TextDecoration.printlnColored("unimplumented", TextDecoration.GRAY);
 			TextDecoration.printColored("6 : exit\t\t", TextDecoration.BOLD_ORANGE);
-			TextDecoration.printColored(">>", TextDecoration.BOLD_ORANGE);
+			TextDecoration.printlnColored(">>", TextDecoration.BOLD_ORANGE);
 			TextDecoration.changeColor(TextDecoration.GRAY);
 			int gameMode = input.nextInt();
 			TextDecoration.resetColor();
@@ -145,6 +147,9 @@ public class Main {
 		// gameSuper.printBoard();
 	}
 
+	/*
+	 * playing the start screen and fake loading
+	 */
 	public static void startAnimation() throws InterruptedException {
 		try {
 			TextDecoration.printlnColored("STARTING GAME : PLEAS WAIT", TextDecoration.BOLD_ORANGE);
@@ -178,6 +183,9 @@ public class Main {
 
 	}
 
+	/*
+	 * clears the console output visualy
+	 */
 	public static void clear() {
 		System.out.print("\033c");
 	}
