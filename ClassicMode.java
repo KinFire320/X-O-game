@@ -25,7 +25,7 @@ public class ClassicMode implements Mode {
 				input.nextLine();
 			}
 
-			Player winner = checkWin();
+			Player winner = checkWin(board);
 			// if one enterd -1 the other will win
 			if (chosse == -2) {
 				winner = (i % 2 != 0 ? Player.X : Player.O);
@@ -85,7 +85,7 @@ public class ClassicMode implements Mode {
 	}
 
 	@Override
-	public Player checkWin() {
+	public Player checkWin(HashMap<Integer, Player> board) {
 
 		Player winner = null;
 		if (board.getOrDefault(0, null) != null &&
