@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class superMode implements Mode {
 
 	Player[][] board = new Player[9][9];
@@ -23,7 +25,7 @@ public class superMode implements Mode {
 	}
 
 	@Override
-	public Player checkWin() {
+	public Player checkWin(HashMap<Integer, Player> board) {
 		return null;
 	}
 

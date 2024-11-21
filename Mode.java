@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public interface Mode {
 	/**
 	 * there where the magic happens the game mode starts in this method to determen
@@ -16,5 +18,5 @@ public interface Mode {
 	 * @return mostly null but if one of the winnig copanation been taked by one
 	 *         player it return the player mark
 	 */
-	Player checkWin();
+	Player checkWin(HashMap<Integer, Player> board);
 }
